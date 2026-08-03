@@ -1,0 +1,30 @@
+{
+  "name": "lezer-turtle",
+  "version": "0.1.0",
+  "description": "Incremental Lezer grammar for RDF 1.2 Turtle and TriG, with an RDF/JS quad emitter that tracks source provenance",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./emit": "./src/emit.js"
+  },
+  "scripts": {
+    "build": "lezer-generator src/turtle.grammar -o src/parser.js",
+    "prepare": "npm run build",
+    "test": "npm run build && node --test test/oracle-test.js test/prov-test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ericprud/lezer-turtle.git"
+  },
+  "author": "ericP <eric@w3.org> (http://www.w3.org/People/Eric/)",
+  "license": "MIT",
+  "dependencies": {
+    "@lezer/highlight": "^1.2.1",
+    "@lezer/lr": "^1.4.2"
+  },
+  "devDependencies": {
+    "@lezer/generator": "^1.7.2",
+    "n3": "^1.26.0"
+  }
+}

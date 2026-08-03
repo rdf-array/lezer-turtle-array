@@ -1,0 +1,581 @@
+{
+ "meta": {
+  "n3CheckoutSha": "3ea651b",
+  "extracted": 233
+ },
+ "turtle": [
+  "",
+  " \t \n  ",
+  "<a> <b> <c>.",
+  "<a> <b> <c>.\n<d> <e> <f>.\n<g> <h> <i>.",
+  "<a> <b> #comment2\n <c> . \n<d> <e> <f>.\n<g> <h> <i>.",
+  "<a> <b> \"string\".",
+  "<a> <b> 3.0.",
+  "<a> <b> 3.",
+  "<a> <b> 1.3e2.",
+  "<a> <b> true.",
+  "<a> <b> \"string\"@en.",
+  "<a> <b> \"string\"@EN.",
+  "<a> <b> \"Hello\"^^<http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>.",
+  "<a> <b> \"Hello\"^^<http://www.w3.org/1999/02/22-rdf-syntax-ns#dirLangString>.",
+  "<a> <b> \"Hello\"@cantbethislong.",
+  "<a> <b> \"string\"^^<type>.",
+  "@prefix x: <urn:x:y#>. <a> <b> \"string\"^^x:z.",
+  "@prefix : <noturn:>. :a :b \"x\"^^<urn:foo>. :a :b \"x\"^^:urn:foo.",
+  "<a> a <t>.",
+  "@prefix : <#>.\n",
+  "@prefix prefix: <http://prefix.cc/>.",
+  "PREFIX base: <http://prefix.cc/>",
+  "PREFIX graph: <http://prefix.cc/>",
+  "PREFIX : <#>\n",
+  "<a> <b> <c>;\n<d> <e>.",
+  "<a> <b> <c>;\n<d> <e>;\n.",
+  "<a> <b> <c>;;\n<d> <e>.",
+  "<a> <b> <c>, <d>.",
+  "_:a <b> _:c.",
+  "[] <b> [].",
+  "[<a> <b>] <c> <d>.",
+  "<a> <b> [<c> <d>].",
+  "<a> <b> [<c> \"x\"].",
+  "<a> <b> [ <u> <v>; ].",
+  "<a> <b> [ <u> <v>;;; ].",
+  "<a> <b> [ <u> <v>; <w> <z> ].",
+  "<a> <b> [ <u> <v>;;; <w> <z> ].",
+  "<a> <b> [ <u> <v>, <z> ].",
+  "<a> <b> [ <u> <v>; <w> \"z\" ].",
+  "<a> <b> [ <u> <v>; <w> \"z\"^^<t> ].",
+  "<a> <b> [ <u> <v>; <w> <z>; ].",
+  "[<a> [<x> <y>]] <c> <d>.",
+  "<a> <b> [<c> [<d> <e>]].",
+  "[<p> <o>].",
+  "() <a> <b>.",
+  "<a> <b> ().",
+  "(<x>) <a> <b>.",
+  "<a> <b> (<x>).",
+  "<a> <b> (\"x\").",
+  "<a> <b> (\"x\"^^<y>).",
+  "<a> <b> (\"x\"@en-GB).",
+  "(<x> <y>) <a> <b>.",
+  "<a> <b> (<x> <y>).",
+  "<a> <b> (\"x\" \"y\"@en-GB 1 \"z\"^^<t>).",
+  "@prefix a: <a#>. <a> <b> (a:x a:y).",
+  "<a> <b> (_:x _:y).",
+  "<a> <b> (<x> ()).",
+  "<a> <b> (<x> (<y>)).",
+  "([]) <a> <b>.",
+  "([] [<x> <y>]) <a> <b>.",
+  "[<a> (<b>)] <c> <d>.",
+  "@base <http://ex.org/>.\n",
+  "BASE <http://ex.org/>\n",
+  "@base <http://ex.org/?foo>.\n",
+  "@base <http://ex.org/foo#bar>.\n",
+  "@base <http://ex.org/foo>.\n",
+  "PREFIX ex: <http://ex.org/a/bb/ccc/../>\n"
+ ],
+ "trig": [
+  "_:a <b> _:c. <g> { _:a <b> _:c }",
+  "{}",
+  "{<a> <b> <c>}",
+  "{<a> <b> <c>.}",
+  "{<a> <b> <c>;<d> <e>,<f>}",
+  "{<a> <b> <c>;<d> <e>,<f>.}",
+  "{<a> <b> <c>;<d> <e>,<f>;}",
+  "{ [<p> <o>]. }",
+  "{ [<p> <o>] }",
+  "<g>{}",
+  "<g> {<a> <b> <c>}",
+  "<g>{<a> <b> <c>.}",
+  "<g> {<a> <b> <c>;<d> <e>,<f>}",
+  "<g>{<a> <b> <c>;<d> <e>,<f>.}",
+  "@prefix g: <g#>.\ng:h {}",
+  "@prefix g: <g#>.\ng:h {<a> <b> <c>}",
+  "@prefix g: <g#>.\ng:h{<a> <b> <c>.}",
+  "@prefix g: <g#>.\ng:h {<a> <b> <c>;<d> <e>,<f>}",
+  "@prefix g: <g#>.\ng:h{<a> <b> <c>;<d> <e>,<f>.}",
+  "<g> { [<p> <o>]. }",
+  "<g> { [<p> <o>] }",
+  "[] {}",
+  "[] {<a> <b> <c>}",
+  "[]{<a> <b> <c>.}",
+  "[] {<a> <b> <c>;<d> <e>,<f>}",
+  "[]{<a> <b> <c>;<d> <e>,<f>.}",
+  "GRAPH <g> {}",
+  "@prefix g: <g#>.\nGRAPH g:h {}",
+  "GRAPH [] {}",
+  "GRAPH <g> {<a> <b> <c>}",
+  "@prefix g: <g#>.\nGRAPH g:h {<a> <b> <c>}",
+  "GRAPH [] {<a> <b> <c>}",
+  "<\\U0001d400> {\n<\\U0001d400> <\\U0001d400> \"\\U0001d400\"^^<\\U0001d400>\n}\n"
+ ],
+ "rdf12": [
+  {
+   "doc": "<a> <b> \"string\"@en--rtl.",
+   "dialect": null,
+   "expected": [
+    "<http://example.org/base/a> <http://example.org/base/b> \"string\"@en--rtl "
+   ]
+  },
+  {
+   "doc": "<a> <b> (\"x\"@en-GB--ltr).",
+   "dialect": null,
+   "expected": [
+    "<http://example.org/base/a> <http://example.org/base/b> _:df_0 ",
+    "_:df_0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> \"x\"@en-gb--ltr ",
+    "_:df_0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> "
+   ]
+  },
+  {
+   "doc": "(<< <a1> <b1> <c1> >> << <a2> <b2> <c2> >>) <a> <b>.",
+   "dialect": null,
+   "expected": [
+    "_:df_0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#reifies> <<(<http://example.org/base/a1> <http://example.org/base/b1> <http://example.org/base/c1>)>> ",
+    "_:df_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#reifies> <<(<http://example.org/base/a2> <http://example.org/base/b2> <http://example.org/base/c2>)>> ",
+    "_:df_2 <http://example.org/base/a> <http://example.org/base/b> ",
+    "_:df_2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:df_0 ",
+    "_:df_2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:df_3 ",
+    "_:df_3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:df_1 ",
+    "_:df_3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> "
+   ]
+  },
+  {
+   "doc": "<a> <b> (<< <a1> <b1> <c1> >> << <a2> <b2> <c2> >>).",
+   "dialect": null,
+   "expected": [
+    "<http://example.org/base/a> <http://example.org/base/b> _:df_2 ",
+    "_:df_0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#reifies> <<(<http://example.org/base/a1> <http://example.org/base/b1> <http://example.org/base/c1>)>> ",
+    "_:df_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#reifies> <<(<http://example.org/base/a2> <http://example.org/base/b2> <http://example.org/base/c2>)>> ",
+    "_:df_2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:df_0 ",
+    "_:df_2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:df_3 ",
+    "_:df_3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:df_1 ",
+    "_:df_3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> "
+   ]
+  },
+  {
+   "doc": "VERSION \"1.2\"",
+   "dialect": null,
+   "expected": []
+  },
+  {
+   "doc": "@version \"1.2\".",
+   "dialect": null,
+   "expected": []
+  },
+  {
+   "doc": "VERSION \"1.2\"\n",
+   "dialect": null,
+   "expected": []
+  },
+  {
+   "doc": "GRAPH <g> {<< <a> <b> <c> >> <q> <z> }",
+   "dialect": "trig",
+   "expected": [
+    "_:df_0 <http://example.org/base/q> <http://example.org/base/z> <http://example.org/base/g>",
+    "_:df_0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#reifies> <<(<http://example.org/base/a> <http://example.org/base/b> <http://example.org/base/c>)>> <http://example.org/base/g>"
+   ]
+  },
+  {
+   "doc": "<<<a> <b> <c>>>.",
+   "dialect": null,
+   "expected": [
+    "_:df_0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#reifies> <<(<http://example.org/base/a> <http://example.org/base/b> <http://example.org/base/c>)>> "
+   ]
+  },
+  {
+   "doc": "<a> <b> <c> . <<<a> <b> <c>>> .",
+   "dialect": null,
+   "expected": [
+    "<http://example.org/base/a> <http://example.org/base/b> <http://example.org/base/c> ",
+    "_:df_0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#reifies> <<(<http://example.org/base/a> <http://example.org/base/b> <http://example.org/base/c>)>> "
+   ]
+  },
+  {
+   "doc": "<<<a> <b> <c>>>. <a> <b> <c>.",
+   "dialect": null,
+   "expected": [
+    "<http://example.org/base/a> <http://example.org/base/b> <http://example.org/base/c> ",
+    "_:df_0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#reifies> <<(<http://example.org/base/a> <http://example.org/base/b> <http://example.org/base/c>)>> "
+   ]
+  },
+  {
+   "doc": "<<<a> <b> <c>>> <b> <c>.",
+   "dialect": null,
+   "expected": [
+    "_:df_0 <http://example.org/base/b> <http://example.org/base/c> ",
+    "_:df_0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#reifies> <<(<http://example.org/base/a> <http://example.org/base/b> <http://example.org/base/c>)>> "
+   ]
+  },
+  {
+   "doc": "<<_:a <b> _:c>> <b> <c>.",
+   "dialect": null,
+   "expected": [
+    "_:df_0 <http://example.org/base/b> <http://example.org/base/c> ",
+    "_:df_0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#reifies> <<(_:a <http://example.org/base/b> _:c)>> "
+   ]
+  },
+  {
+   "doc": "<<_:a <b> \"c\"^^<d>>> <b> <c>.",
+   "dialect": null,
+   "expected": [
+    "_:df_0 <http://example.org/base/b> <http://example.org/base/c> ",
+    "_:df_0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#reifies> <<(_:a <http://example.org/base/b> \"c\"^^<http://example.org/base/d>)>> "
+   ]
+  },
+  {
+   "doc": "<<<a> <b> <c> ~ <iri>>> <b> <c>.",
+   "dialect": null,
+   "expected": [
+    "<http://example.org/base/iri> <http://example.org/base/b> <http://example.org/base/c> ",
+    "<http://example.org/base/iri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#reifies> <<(<http://example.org/base/a> <http://example.org/base/b> <http://example.org/base/c>)>> "
+   ]
+  },
+  {
+   "doc": "<<<a> <b> <c> ~ _:b1>> <b> <c>.",
+   "dialect": null,
+   "expected": [
+    "_:b1 <http://example.org/base/b> <http://example.org/base/c> ",
+    "_:b1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#reifies> <<(<http://example.org/base/a> <http://example.org/base/b> <http://example.org/base/c>)>> "
+   ]
+  },
+  {
+   "doc": "<a> <b> <<<a> <b> <c> ~ <iri>>>.",
+   "dialect": null,
+   "expected": [
+    "<http://example.org/base/a> <http://example.org/base/b> <http://example.org/base/iri> ",
+    "<http://example.org/base/iri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#reifies> <<(<http://example.org/base/a> <http://example.org/base/b> <http://example.org/base/c>)>> "
+   ]
+  },
+  {
+   "doc": "<a> <b> <<<a> <b> <c> ~ _:b1>>.",
+   "dialect": null,
+   "expected": [
+    "<http://example.org/base/a> <http://example.org/base/b> _:b1 ",
+    "_:b1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#reifies> <<(<http://example.org/base/a> <http://example.org/base/b> <http://example.org/base/c>)>> "
+   ]
+  },
+  {
+   "doc": "<a> <b> <<(<a> <b> <c>)>>.",
+   "dialect": null,
+   "expected": [
+    "<http://example.org/base/a> <http://example.org/base/b> <<(<http://example.org/base/a> <http://example.org/base/b> <http://example.org/base/c>)>> "
+   ]
+  },
+  {
+   "doc": "<a> <b> <<<a> <b> <c>>>.",
+   "dialect": null,
+   "expected": [
+    "<http://example.org/base/a> <http://example.org/base/b> _:df_0 ",
+    "_:df_0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#reifies> <<(<http://example.org/base/a> <http://example.org/base/b> <http://example.org/base/c>)>> "
+   ]
+  },
+  {
+   "doc": "<a> <b> <<(_:a <b> _:c)>>.",
+   "dialect": null,
+   "expected": [
+    "<http://example.org/base/a> <http://example.org/base/b> <<(_:a <http://example.org/base/b> _:c)>> "
+   ]
+  },
+  {
+   "doc": "<a> <b> <<_:a <b> _:c>>.",
+   "dialect": null,
+   "expected": [
+    "<http://example.org/base/a> <http://example.org/base/b> _:df_0 ",
+    "_:df_0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#reifies> <<(_:a <http://example.org/base/b> _:c)>> "
+   ]
+  },
+  {
+   "doc": "<a> <b> <<(_:a <b> \"c\"^^<d>)>>.",
+   "dialect": null,
+   "expected": [
+    "<http://example.org/base/a> <http://example.org/base/b> <<(_:a <http://example.org/base/b> \"c\"^^<http://example.org/base/d>)>> "
+   ]
+  },
+  {
+   "doc": "<a> <b> <<_:a <b> \"c\"^^<d>>>.",
+   "dialect": null,
+   "expected": [
+    "<http://example.org/base/a> <http://example.org/base/b> _:df_0 ",
+    "_:df_0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#reifies> <<(_:a <http://example.org/base/b> \"c\"^^<http://example.org/base/d>)>> "
+   ]
+  },
+  {
+   "doc": "<<<<<a> <b> <c>>> <f> <g>>> <d> <e>.",
+   "dialect": null,
+   "expected": [
+    "_:df_0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#reifies> <<(<http://example.org/base/a> <http://example.org/base/b> <http://example.org/base/c>)>> ",
+    "_:df_1 <http://example.org/base/d> <http://example.org/base/e> ",
+    "_:df_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#reifies> <<(_:df_0 <http://example.org/base/f> <http://example.org/base/g>)>> "
+   ]
+  },
+  {
+   "doc": "<d> <e> <<(<f> <g> <<(<a> <b> <c>)>>)>>.",
+   "dialect": null,
+   "expected": [
+    "<http://example.org/base/d> <http://example.org/base/e> <<(<http://example.org/base/f> <http://example.org/base/g> <<(<http://example.org/base/a> <http://example.org/base/b> <http://example.org/base/c>)>>)>> "
+   ]
+  },
+  {
+   "doc": "<d> <e> <<<f> <g> <<<a> <b> <c>>>>>.",
+   "dialect": null,
+   "expected": [
+    "<http://example.org/base/d> <http://example.org/base/e> _:df_1 ",
+    "_:df_0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#reifies> <<(<http://example.org/base/a> <http://example.org/base/b> <http://example.org/base/c>)>> ",
+    "_:df_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#reifies> <<(<http://example.org/base/f> <http://example.org/base/g> _:df_0)>> "
+   ]
+  },
+  {
+   "doc": "<<<f> <g> <<<a> <b> <c>>>>> <d> <e>.",
+   "dialect": null,
+   "expected": [
+    "_:df_0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#reifies> <<(<http://example.org/base/a> <http://example.org/base/b> <http://example.org/base/c>)>> ",
+    "_:df_1 <http://example.org/base/d> <http://example.org/base/e> ",
+    "_:df_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#reifies> <<(<http://example.org/base/f> <http://example.org/base/g> _:df_0)>> "
+   ]
+  },
+  {
+   "doc": "<d> <e> <<<<<a> <b> <c>>> <f> <g>>>.",
+   "dialect": null,
+   "expected": [
+    "<http://example.org/base/d> <http://example.org/base/e> _:df_1 ",
+    "_:df_0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#reifies> <<(<http://example.org/base/a> <http://example.org/base/b> <http://example.org/base/c>)>> ",
+    "_:df_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#reifies> <<(_:df_0 <http://example.org/base/f> <http://example.org/base/g>)>> "
+   ]
+  },
+  {
+   "doc": "<<<a> <b> <c>>> <b> <c>;\n<d> <c>.",
+   "dialect": null,
+   "expected": [
+    "_:df_0 <http://example.org/base/b> <http://example.org/base/c> ",
+    "_:df_0 <http://example.org/base/d> <http://example.org/base/c> ",
+    "_:df_0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#reifies> <<(<http://example.org/base/a> <http://example.org/base/b> <http://example.org/base/c>)>> "
+   ]
+  },
+  {
+   "doc": "<<<a> <b> <c>>> <b> <c>;\n<d> <<<a> <b> <c>>>.",
+   "dialect": null,
+   "expected": [
+    "_:df_0 <http://example.org/base/b> <http://example.org/base/c> ",
+    "_:df_0 <http://example.org/base/d> _:df_1 ",
+    "_:df_0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#reifies> <<(<http://example.org/base/a> <http://example.org/base/b> <http://example.org/base/c>)>> ",
+    "_:df_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#reifies> <<(<http://example.org/base/a> <http://example.org/base/b> <http://example.org/base/c>)>> "
+   ]
+  },
+  {
+   "doc": "<a> <b> <c> {| <b> <c> |}.",
+   "dialect": null,
+   "expected": [
+    "<http://example.org/base/a> <http://example.org/base/b> <http://example.org/base/c> ",
+    "_:df_0 <http://example.org/base/b> <http://example.org/base/c> ",
+    "_:df_0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#reifies> <<(<http://example.org/base/a> <http://example.org/base/b> <http://example.org/base/c>)>> "
+   ]
+  },
+  {
+   "doc": "<a> <b> <c> ~ .",
+   "dialect": null,
+   "expected": [
+    "<http://example.org/base/a> <http://example.org/base/b> <http://example.org/base/c> ",
+    "_:df_0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#reifies> <<(<http://example.org/base/a> <http://example.org/base/b> <http://example.org/base/c>)>> "
+   ]
+  },
+  {
+   "doc": "<a> <b> <c> ~ <iri> {| <b> <c> |}.",
+   "dialect": null,
+   "expected": [
+    "<http://example.org/base/a> <http://example.org/base/b> <http://example.org/base/c> ",
+    "<http://example.org/base/iri> <http://example.org/base/b> <http://example.org/base/c> ",
+    "<http://example.org/base/iri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#reifies> <<(<http://example.org/base/a> <http://example.org/base/b> <http://example.org/base/c>)>> "
+   ]
+  },
+  {
+   "doc": "<a> <b> <c> {| <b> <c> |}. <a2> <b2> <c2> {| <b2> <c2> |}.",
+   "dialect": null,
+   "expected": [
+    "<http://example.org/base/a2> <http://example.org/base/b2> <http://example.org/base/c2> ",
+    "<http://example.org/base/a> <http://example.org/base/b> <http://example.org/base/c> ",
+    "_:df_0 <http://example.org/base/b> <http://example.org/base/c> ",
+    "_:df_0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#reifies> <<(<http://example.org/base/a> <http://example.org/base/b> <http://example.org/base/c>)>> ",
+    "_:df_1 <http://example.org/base/b2> <http://example.org/base/c2> ",
+    "_:df_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#reifies> <<(<http://example.org/base/a2> <http://example.org/base/b2> <http://example.org/base/c2>)>> "
+   ]
+  },
+  {
+   "doc": "<a> <b> <c> {| <b1> <c1>; <b2> <c2> |}.",
+   "dialect": null,
+   "expected": [
+    "<http://example.org/base/a> <http://example.org/base/b> <http://example.org/base/c> ",
+    "_:df_0 <http://example.org/base/b1> <http://example.org/base/c1> ",
+    "_:df_0 <http://example.org/base/b2> <http://example.org/base/c2> ",
+    "_:df_0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#reifies> <<(<http://example.org/base/a> <http://example.org/base/b> <http://example.org/base/c>)>> "
+   ]
+  },
+  {
+   "doc": "<a> <b> <c> ~ <iri> {| <b1> <c1>; <b2> <c2> |}.",
+   "dialect": null,
+   "expected": [
+    "<http://example.org/base/a> <http://example.org/base/b> <http://example.org/base/c> ",
+    "<http://example.org/base/iri> <http://example.org/base/b1> <http://example.org/base/c1> ",
+    "<http://example.org/base/iri> <http://example.org/base/b2> <http://example.org/base/c2> ",
+    "<http://example.org/base/iri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#reifies> <<(<http://example.org/base/a> <http://example.org/base/b> <http://example.org/base/c>)>> "
+   ]
+  },
+  {
+   "doc": "<a> <b> <c> ~ <iri> {| <b1> <c1>; <b2> <c2> ; |}.",
+   "dialect": null,
+   "expected": [
+    "<http://example.org/base/a> <http://example.org/base/b> <http://example.org/base/c> ",
+    "<http://example.org/base/iri> <http://example.org/base/b1> <http://example.org/base/c1> ",
+    "<http://example.org/base/iri> <http://example.org/base/b2> <http://example.org/base/c2> ",
+    "<http://example.org/base/iri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#reifies> <<(<http://example.org/base/a> <http://example.org/base/b> <http://example.org/base/c>)>> "
+   ]
+  },
+  {
+   "doc": "<a> <b> <c> {| <b> <c> |}.\n<a2> <b2> <c2>.",
+   "dialect": null,
+   "expected": [
+    "<http://example.org/base/a2> <http://example.org/base/b2> <http://example.org/base/c2> ",
+    "<http://example.org/base/a> <http://example.org/base/b> <http://example.org/base/c> ",
+    "_:df_0 <http://example.org/base/b> <http://example.org/base/c> ",
+    "_:df_0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#reifies> <<(<http://example.org/base/a> <http://example.org/base/b> <http://example.org/base/c>)>> "
+   ]
+  },
+  {
+   "doc": "<a> <b> <c> ~ <iri> {| <b> <c> |}.\n<a2> <b2> <c2>.",
+   "dialect": null,
+   "expected": [
+    "<http://example.org/base/a2> <http://example.org/base/b2> <http://example.org/base/c2> ",
+    "<http://example.org/base/a> <http://example.org/base/b> <http://example.org/base/c> ",
+    "<http://example.org/base/iri> <http://example.org/base/b> <http://example.org/base/c> ",
+    "<http://example.org/base/iri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#reifies> <<(<http://example.org/base/a> <http://example.org/base/b> <http://example.org/base/c>)>> "
+   ]
+  },
+  {
+   "doc": "<a> <b> <c> {| <b1> <c1> |} {| <b2> <c2> |}.",
+   "dialect": null,
+   "expected": [
+    "<http://example.org/base/a> <http://example.org/base/b> <http://example.org/base/c> ",
+    "_:df_0 <http://example.org/base/b1> <http://example.org/base/c1> ",
+    "_:df_0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#reifies> <<(<http://example.org/base/a> <http://example.org/base/b> <http://example.org/base/c>)>> ",
+    "_:df_1 <http://example.org/base/b2> <http://example.org/base/c2> ",
+    "_:df_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#reifies> <<(<http://example.org/base/a> <http://example.org/base/b> <http://example.org/base/c>)>> "
+   ]
+  },
+  {
+   "doc": "<a> <b> <c> ~ <iri1> {| <b1> <c1> |} ~ <iri2> {| <b2> <c2> |}.",
+   "dialect": null,
+   "expected": [
+    "<http://example.org/base/a> <http://example.org/base/b> <http://example.org/base/c> ",
+    "<http://example.org/base/iri1> <http://example.org/base/b1> <http://example.org/base/c1> ",
+    "<http://example.org/base/iri1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#reifies> <<(<http://example.org/base/a> <http://example.org/base/b> <http://example.org/base/c>)>> ",
+    "<http://example.org/base/iri2> <http://example.org/base/b2> <http://example.org/base/c2> ",
+    "<http://example.org/base/iri2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#reifies> <<(<http://example.org/base/a> <http://example.org/base/b> <http://example.org/base/c>)>> "
+   ]
+  },
+  {
+   "doc": "<G> { <a> <b> <c> {| <b> <c> |}. }",
+   "dialect": "trig",
+   "expected": [
+    "<http://example.org/base/a> <http://example.org/base/b> <http://example.org/base/c> <http://example.org/base/G>",
+    "_:df_0 <http://example.org/base/b> <http://example.org/base/c> <http://example.org/base/G>",
+    "_:df_0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#reifies> <<(<http://example.org/base/a> <http://example.org/base/b> <http://example.org/base/c>)>> <http://example.org/base/G>"
+   ]
+  },
+  {
+   "doc": "<a> <b> <c> ~ <iri1> {| <b1> <c1> |} {| <b2> <c2> |}.",
+   "dialect": null,
+   "expected": [
+    "<http://example.org/base/a> <http://example.org/base/b> <http://example.org/base/c> ",
+    "<http://example.org/base/iri1> <http://example.org/base/b1> <http://example.org/base/c1> ",
+    "<http://example.org/base/iri1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#reifies> <<(<http://example.org/base/a> <http://example.org/base/b> <http://example.org/base/c>)>> ",
+    "_:df_0 <http://example.org/base/b2> <http://example.org/base/c2> ",
+    "_:df_0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#reifies> <<(<http://example.org/base/a> <http://example.org/base/b> <http://example.org/base/c>)>> "
+   ]
+  }
+ ],
+ "negative": [
+  "<a> <b> \"string\"--rtl.",
+  "<a> <b> \"string\"^^x:z.",
+  "@PREFIX : <#>.",
+  ":a ",
+  "a:a ",
+  "<a> b:c ",
+  "<a> <b> c:d ",
+  "<a> <b> \"c\"^^d:e ",
+  "@prefix <a> ",
+  "@prefix : .",
+  "@prefix : <a> ;",
+  "<a> <b> <c>. <x>; <y> <z>.",
+  "<a> <b> <c>. <x> <y>, <z>.",
+  "<> <> <> <>.\n(<>) <> (<>) <>.",
+  "<a> <b> [<c>].",
+  "<a> <b> [;].",
+  "<a:a> <b:b> <c:c> ; ]",
+  "[ <a> <b> .",
+  "[].",
+  "[[<p> <o>]].",
+  "<a> <b> (a:x a:y).",
+  "<a> <b> (]).",
+  "@BASE <http://ex.org/>.",
+  "<entity.beeldbank_leiden_person:A.E._Stuur.> <x:x> <x:x> .",
+  "@base <entity.beeldbank_leiden_person:A.E._Stuur.> .",
+  "VERSION <ex:abc>",
+  "VERSION 1.2",
+  "VERSION \"\"\"1.2\"\"\"",
+  "VERSION \"1.2-unknown\"",
+  "}",
+  "{",
+  "{}}",
+  "{.}",
+  "{;}",
+  "{<a> <b> <c>.",
+  "() {}",
+  "[<a> <b>] {}",
+  "GRAPH [<a> <b>] {}",
+  "GRAPH <a> <b> <c>.",
+  "GRAPH GRAPH <g> {}",
+  "<a> <b> <c> <g>.",
+  "@prefix p: <p#>.\np:a p:b p:c p:g.",
+  "<a> <b> <c> p:g.",
+  "<a> <b> \"c\"^^<d> <g>.",
+  "_:a <b> \"c\"^^<d> _:g.",
+  "{<a> <b> <c> <g>.}",
+  "<a> <b> <c> <g>;",
+  "@base a: ",
+  "<a> <b> [<c> (<d>]).",
+  "<a> <b> [<c> <d>]].",
+  "<a> <b>.",
+  "<a> <b> <c>",
+  "a <a> <a>.",
+  "<a> <a> a .",
+  "<a> .",
+  "<a> @",
+  "<a> <<<b> <c> <d>>> <e>",
+  "<d> <e> <<(<<(<a> <b> <c>)>> <f> <g>.",
+  "<d> <e> <<<<<a> <b> <c>>> <f> <g>.",
+  "<d> <e> <<(<<(<a> <b> <c> <f> <g>)>>.",
+  "<d> <e> <<<<<a> <b> <c> <f> <g>>>.",
+  "<d> <e> <<(<<(<a> <b> <c>)>>)>> <f> <g>)>>.",
+  "<d> <e> <<<<<a> <b> <c>>>>> <f> <g>>>.",
+  "<d> <e> <<(<<(<a> <b> <c>)>> <f> <g>)>>)>>.",
+  "<d> <e> <<<<<a> <b> <c>>> <f> <g>>>>>.",
+  "<a> <b> <c>)>>.",
+  "<a> <b> <c>>>.",
+  "<d> <e> <<(<a> <b>)>>.",
+  "<d> <e> <<<a> <b>>>.",
+  "<<(<a> <b>)>> <d> <e>.",
+  "<<<a> <b>>> <d> <e>.",
+  ")>> <<(",
+  ">> <<",
+  "<<(<a> <b> <c>)>>.",
+  "<<<a> <b> <c> <d> <e>>> <a> <b> .",
+  "<a> <b> <c> <g>.\n<<<a> <b> <c>>> <d> <e>.",
+  "<a> <b> <c> {| |}",
+  "<a> <b> <c> {| |} .",
+  "<a> <b> <c> {| <b> |}",
+  "<a> <b> <c> {| <b1> <c1>; |}",
+  "<a> <b> <c> {| <b1> <c1>; <b2> |}",
+  "<a> <b> <c> {| <b1> <c1>",
+  "<a> <b> <c> {| <b1> <c1>. <a2> <b2> <c2>",
+  "<a> <b> <c> |}",
+  "<G> { <a> <b> <c> {|  |}}",
+  "<G> { <a> <b> <c> {|  |} .}"
+ ]
+}
