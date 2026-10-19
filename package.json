@@ -11,7 +11,7 @@
   "scripts": {
     "build": "lezer-generator src/turtle.grammar -o src/parser.js",
     "prepare": "npm run build",
-    "test": "npm run build && node --test test/oracle-test.js test/prov-test.js"
+    "test": "npm run build && node --test test/oracle-test.js test/prov-test.js test/sequence-test.js"
   },
   "repository": {
     "type": "git",
@@ -25,6 +25,6 @@
   },
   "devDependencies": {
     "@lezer/generator": "^1.7.2",
-    "n3": "^1.26.0"
+    "n3": "github:rdf-array/N3.js-array#rdf-sequences"
   }
 }

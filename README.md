@@ -1,4 +1,18 @@
-# lezer-turtle
+<img src=".github/rdf-array-logo.png" alt="[lezer-turtle]" width="96" align="right">
+
+# lezer-turtle-array: lezer-turtle with RDF sequences
+
+**RDF-** fork of [lezer-turtle](https://github.com/ericprud/lezer-turtle): a collection
+`(1 2)` is emitted as one **sequence** term (RDF/JS `termType: "Sequence"`, with
+`elements`), not as a ladder of `rdf:first`/`rdf:rest` blank nodes; `()` is the empty
+sequence, not `rdf:nil`. The grammar is unchanged (a collection was already one node);
+the emitter builds the term with the data factory's `sequence()` when it has one (as
+[N3.js-array](https://github.com/rdf-array/N3.js-array)'s does) and a plain
+sequence-shaped term otherwise. Provenance for the quad points at the whole `( … )` span.
+The oracle tests compare against N3.js-array (N3.js 2.13 with sequences); the few documents where
+lezer-turtle knowingly differs from N3.js 2.13 on matters unrelated to sequences are listed, with
+their reasons, in `test/extract-n3-corpus.js`.
+
 
 An incremental [Lezer](https://lezer.codemirror.net/) grammar for
 [RDF 1.2 Turtle](https://www.w3.org/TR/rdf12-turtle/) — with a `trig`

@@ -14,8 +14,8 @@
  * Ranges are {start, end} character offsets (UTF-16, as Lezer counts).
  * Ranges come in arrays because a position's provenance can be split or
  * synthetic: a blank node property list's subject is its whole  [ … ]
- * bracket span, collection cell quads (rdf:first/rest) carry item and
- * collection spans, and annotation-derived reification quads point at the
+ * bracket span, a collection is one sequence term whose range is the whole
+ * ( … ) span (RDF-: no rdf:first/rest cells), and annotation-derived reification quads point at the
  * ~reifier / {| … |} syntax.
  *
  * The index is keyed canonically (an N-Quads-shaped string), NOT by object
@@ -34,6 +34,7 @@ export function termKey (term) {
   switch (term.termType) {
   case "NamedNode": return `<${term.value}>`;
   case "BlankNode": return `_:${term.value}`;
+  case "Sequence": return "(" + term.elements.map(termKey).join(" ") + ")";
   case "Literal": {
     const val = `"${term.value.replace(/\\/g, "\\\\").replace(/"/g, '\\"').replace(/\n/g, "\\n").replace(/\r/g, "\\r")}"`;
     if (term.language)
@@ -382,26 +383,31 @@ function blankNodePropertyList (node, state) {
   return bnode;
 }
 
+// RDF-: a collection is one sequence term holding its items; no rdf:first/rdf:rest
+// quads are emitted and `()` is the empty sequence, not rdf:nil.  The factory's
+// `sequence()` makes the term when it has one (N3.js-array does); otherwise a plain
+// RDF/JS-shaped object stands in.
 function collection (node, state) {
-  const items = [];
+  const elements = [];
   for (let child = node.firstChild; child; child = child.nextSibling)
     if (child.name === "Object")
-      items.push({node: child, value: term(child.firstChild, state)});
-  const nil = {term: state.factory.namedNode(RDF + "nil"), ranges: [range(node)]};
-  if (items.length === 0)
-    return nil;
-  let head = null, prev = null;
-  for (const item of items) {
-    const cell = {term: freshBnode(state), ranges: [range(item.node)]};
-    if (prev)
-      emit(state, prev, {term: state.factory.namedNode(RDF + "rest"), ranges: [range(node)]}, cell);
-    else
-      head = cell;
-    emit(state, cell, {term: state.factory.namedNode(RDF + "first"), ranges: [range(item.node)]}, item.value);
-    prev = cell;
-  }
-  emit(state, prev, {term: state.factory.namedNode(RDF + "rest"), ranges: [range(node)]}, nil);
-  return {term: head.term, ranges: [range(node)]};
+      elements.push(term(child.firstChild, state).term);
+  return {term: sequence(state.factory, elements), ranges: [range(node)]};
+}
+
+export function sequence (factory, elements) {
+  if (typeof factory.sequence === "function")
+    return factory.sequence(elements);
+  const value = "(" + JSON.stringify(elements.map(termKey)) + ")";
+  return {
+    termType: "Sequence",
+    value,
+    elements,
+    equals (other) {
+      return !!other && other.termType === "Sequence" && other.elements.length === elements.length
+        && elements.every((e, i) => e.equals(other.elements[i]));
+    },
+  };
 }
 
 function rdfLiteral (node, state) {

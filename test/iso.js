@@ -6,6 +6,8 @@ export function keyWithBnodes (quad, rename) {
         ? "_:" + (rename.get(term.value) ?? "?")
         : term.termType === "Quad"
         ? `<<(${t(term.subject)} ${t(term.predicate)} ${t(term.object)})>>`
+        : term.termType === "Sequence"
+        ? "(" + term.elements.map(t).join(" ") + ")"
         : termKey(term);
   return `${t(quad.subject)} ${t(quad.predicate)} ${t(quad.object)} ${t(quad.graph)}`;
 }
@@ -15,6 +17,7 @@ export function bnodeLabels (quads) {
   const walk = term => {
     if (term.termType === "BlankNode") labels.add(term.value);
     else if (term.termType === "Quad") { walk(term.subject); walk(term.predicate); walk(term.object); }
+    else if (term.termType === "Sequence") term.elements.forEach(walk);
   };
   for (const q of quads) { walk(q.subject); walk(q.predicate); walk(q.object); walk(q.graph); }
   return [...labels];
