@@ -15,7 +15,7 @@
  * Ranges come in arrays because a position's provenance can be split or
  * synthetic: a blank node property list's subject is its whole  [ … ]
  * bracket span, a collection is one sequence term whose range is the whole
- * ( … ) span (RDF-: no rdf:first/rest cells), and annotation-derived reification quads point at the
+ * ( … ) span (rdf-array: no rdf:first/rest cells), and annotation-derived reification quads point at the
  * ~reifier / {| … |} syntax.
  *
  * The index is keyed canonically (an N-Quads-shaped string), NOT by object
@@ -383,7 +383,7 @@ function blankNodePropertyList (node, state) {
   return bnode;
 }
 
-// RDF-: a collection is one sequence term holding its items; no rdf:first/rdf:rest
+// rdf-array: a collection is one sequence term holding its items; no rdf:first/rdf:rest
 // quads are emitted and `()` is the empty sequence, not rdf:nil.  The factory's
 // `sequence()` makes the term when it has one (N3.js-array does); otherwise a plain
 // RDF/JS-shaped object stands in.

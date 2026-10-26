@@ -1,5 +1,5 @@
 /**
- * RDF-: a collection parses to one sequence term, with provenance on the
+ * rdf-array: a collection parses to one sequence term, with provenance on the
  * whole ( … ) span, and nothing about rdf:first/rdf:rest.
  */
 import {test} from "node:test";

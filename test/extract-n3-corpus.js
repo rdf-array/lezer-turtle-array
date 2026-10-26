@@ -53,7 +53,7 @@ const knownDivergences = new Map([
   ["<G> { <a> <b> <c> {| <b> <c> |}. }",
    "N3.js main emits the rdf:reifies quad in the default graph while putting the annotation body in <G>; we keep both in <G> (suspected N3 bug)"],
 ]);
-// RDF-: the oracle is N3.js-array (N3.js 2.13 with sequence terms), stricter
+// rdf-array: the oracle is N3.js-array (N3.js 2.13 with sequence terms), stricter
 // than the n3 1.x lezer-turtle was written against in ways that have nothing
 // to do with sequences.  Documents where lezer-turtle knowingly differs from
 // it are left out of the corpus, each with its reason.
